@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Students</title>
+    <link href="static/studentstyle.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="static/images/icon.jpg">
+  </head>
+  <header>
+    <div class = "container">
+      <a onclick="snd.play()"><img src="static/images/logo.png" id="logo"/></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a class="active" href="students2.html">Students</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <div id="students">
+      <h2>Students</h2>
+      <div id="studentdata">
+        <div id="content">
+          {% for row in student_json %}
+          <div style="padding-top:15px;border-radius: 35px; background-color:'+barColor+';width:250px;height:5px;border:1px solid'+barColor+'; float: right; width: 100%"><p style="color:#FFFFFF">_</p></div>
+          <a href="#nav{{ loop.index }}"><span><h3 style="text-align:left">{{ row["Name"] }}</h3></span></a>
+          <div style="float: right; width: 50%"><h6 style="color:'+barColor+';text-align:right">{{egrades[loop.index-1]}}%</h6></div>
+          <p>Current Grade:</p>
+          <div class="expandable" id="nav{{ loop.index }}">
+            <div style="float: right; width: 50%"><p style="text-align:center">{{ row["Hours of work"] }} hours</p></div>
+            <p>Hours of work this week:</p>
+            <div style="float: right; width: 50%"><p style="text-align:center">{{ row["Tests"] }} tests</p></div>
+            <p>Number of tests:</p>
+            <div style="float: right; width: 50%"><p style="text-align:center">{{ row["English"] }}</p></div>
+            <p>Student ID:</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div id="summary">
+      <h4>Class</h4>
+      <div id="summarydata">
+        <h5>Average Grade: {{avg_grade}}% </h5>
+        <h5>Average Hours of Work: {{avg_hours}}</h5>
+        <h5>Average Number of Tests: {{avg_test}}</h5>
+      </div>
+    </div>
+  </body>
+  <script>var snd = new Audio("static/logo.mp3");</script>
+</html>

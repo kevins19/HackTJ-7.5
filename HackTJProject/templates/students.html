@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Students</title>
+    <link href="static/studentstyle.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="static/images/icon.jpg">
+  </head>
+  <header>
+    <div class = "container">
+      <a onclick="snd.play()"><img src="static/images/logo.png" id="logo"/></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a class="active" href="students.html">Students</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <div id="students">
+      <h2>Students</h2>
+      <div id="studentdata">
+        <div id="content"> 
+        </div> 
+        <button onclick='addCode2(65, 5, 4, 91, "alenhuo")'>add student</button>
+        <script>
+          function makeid(length){
+            var result           = '';
+            var caps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var characters       = 'abcdefghijklmnopqrstuvwxyz';
+            var charactersLength = characters.length;
+            result += caps.charAt(Math.floor(Math.random() * charactersLength));
+            for ( var i = 1; i < length; i++ ) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+          }
+          let gradeAvg = [];
+          var studentCount = 0;
+          function addCode2(completionPercent,workHours,testNum,grade,name){
+            gradeAvg.push(grade);
+            grade = Math.floor(Math.random() * 100) + 1;
+            completionPercent = Math.floor(Math.random() * 100) + 1;
+            workHours = Math.floor(Math.random() * 10);
+            testNum = Math.floor(Math.random() * 10);
+            name = makeid(5) + " " + makeid(5);
+            var barColor, completionStatus, letterGrade;
+            if(completionPercent==100){
+              completionStatus = "Complete";
+              barColor= "#4CAF50";
+            } else if(completionPercent>=75){
+              completionStatus = "In Progress";
+              barColor= "#4CAF50";
+            } else if (completionPercent<75 && completionPercent>25){
+              barColor= "#ffd500";
+              completionStatus = "In Progress";
+            } else if (completionPercent<=25 && completionPercent>0) {
+              barColor= "#ff0000"; 
+              completionStatus = "In Progress";
+            } else {
+              barColor= "#ff0000";
+              completionStatus = "Not Started";
+            }
+            if(grade == 0){
+              letterGrade = "N/A"
+            } else if (grade >= 92.5){
+              letterGrade = "A";
+            } else if (grade >= 89.5){
+              letterGrade = "A-"
+            } else if (grade >= 86.5){
+              letterGrade = "B+"
+            } else if (grade >= 82.5){
+              letterGrade = "B"
+            } else if (grade >= 79.5){
+              letterGrade = "B-"
+            } else if (grade >= 76.5){
+              letterGrade = "C+"
+            } else if (grade >= 72.5){
+              letterGrade = "C"
+            } else if (grade >= 69.5){
+              letterGrade = "C-"
+            } else if (grade >= 66.5){
+              letterGrade = "D+"
+            } else if (grade >= 63.5){
+              letterGrade = "D"
+            } else {
+              letterGrade = "F"
+            }
+            completionStatus += " " + completionPercent + "%";
+            document.getElementById("content").innerHTML += '<div style="padding-top:15px;border-radius: 35px; background-color:'+barColor+';width:250px;height:5px;border:1px solid'+barColor+'; float: right; width: '+completionPercent/2+'%"><p style="color:#FFFFFF">_</p></div>'+'<a href="#nav'+studentCount +'"><span><h3>'+name+'</h3></span></a>'+'<div style="float: right; width: 50%"><h6 style="color:'+barColor+';text-align:right">'+completionStatus+'</h6></div>'+'<p>Assignment Status:</p>'+'<div class="expandable" id="nav'+studentCount+'"><div style="float: right; width: 50%"><p style="text-align:center">'+workHours+' hours</p></div><p>Hours of work this week:</p><div style="float: right; width: 50%"><p style="text-align:center">'+testNum+' tests</p></div><p>Number of tests:</p><div style="float: right; width: 50%"><p style="text-align:center">('+letterGrade+')'+' '+grade+'%</p></div><p>Grade:</p></div>'
+            studentCount = studentCount+1;
+          }
+        </script>
+      </div>
+    </div>
+    <div id="summary">
+      <h4>Class</h4>
+      <div id="summarydata">
+        <h5>Average Grade:</h5>
+        <h5>Average Hours of Work:</h5>
+        <h5>Average Number of Tests:</h5>
+      </div>
+    </div>
+  </body>
+  <script>var snd = new Audio("static/logo.mp3");</script>
+</html>

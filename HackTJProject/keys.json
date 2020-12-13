@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "classcalender",
+  "private_key_id": "9450e89998faa80f879fe83c95b93a58ea8e0ac2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCy4rJfWURH0ddG\nem58tSkm+2uVK1w2imXWeJbU1zUCs7VqUPq2g76JwVmG9aBbvBanCy40RE/JsZLP\nYViwzPeR4dcwgmNY+l/5aCyDoiCc49pacNBRbMiBgfbs8TFW2LGDmFGzgWZLEhrM\nPbKyuV+BPQ05Lb0yXdtmQCSAXFmsMDD3uFOlKt0qVy35hIwjX57pWTNfCdCLg29i\ngwVIOf2CXd8mJtazsBx6o8mCQV+I+B5RGPJ159+B2/UX4+186uSHX1Jlf4eSqbqH\n/wDdCsBtpX3yo8IK/EzkdgxWOd2+S19H+HLKny/cWRpACDyj187ocI86Va/YqdqM\nTjQrLxgPAgMBAAECggEAB1WSGKSxTvyEhgg5BXXsBQQj6g7IDhhoin2ROZLFQqIZ\nmw1M6jTGmCFMSWNCuuAgUaL8tvniB5P3P/duynjs4ZdP2lZOOnSxgKlLwe3gxm31\nIuYjNGNwaRbqB9bvve7OgGW7W8+/YO6SGLOi4v8EsmjNZP3CFxGQEEYq+PRQXOXf\nK67HyAQUAYd54wi+HfhUNvboCIx5SfAxN9TzAnspLGErNvYSmzlA+7Kzu0RhsmdF\nFpW3ySXJV0G607C8E4whp+rOvMAa6fPnKUxIAedFo2XYZ2+A5EYUGSgeU6cinKjU\nGIvAP5kIx/kts/vJyY/rtuJY2+SmmOoXxPC7VcYyuQKBgQD5Lu6eNldLL5kg9BaM\nb5Oj5NzlQ8MeJXfDkg+I8wQ+tbOjNFuH4+yft+8iRpPbY9xCp0M85NX6Jcyv0mpB\nLDs0twJwScL5oIUzkwGeW6g4foyE4un8KoTFyDt0eWhZJ0S/iwkDZJEJX0FCRm30\nS4uTWdQT9VrrvOUrXLZQpQEe5QKBgQC3x3VxVOzpMTFjMfUtdgRdaDm1h76RA3ym\nkml/Ps3uGVPcFkGtxWRieDtUQLdtlep1o6kV/w5rZ8WFWbcNLnaZOr082dJ/1wHW\nNJcgjvt9Gq/PTgsa+jGPwfvz0sVMNSNTGjkBg9lVLATqQIjejtJyW6JRU4IB+4AF\nsO1SqP+34wKBgBR7ehvBJb3FZNXjmnLivQUMy+eAgWpZ9BU8TVCZgTDSaLiylg9+\nebXLPbnYiVDQTYuhChLYUIpmTwPozNkclKVJocavGXrBahGKNOjaaeJy7IQDzu3u\nZMmJIvH5BM3HP4xrFkuUGaPmk4uqFGGvUALFsHwPf/C+ryu4TDgmyAfNAoGAch1C\nCYtISEwpdISyzvW3JCDxpIyTggv+PJgxNbfTuwKzFbgkNDibaqFphZlhzIQIP9/N\nwEDNvVeESJc6mM6/Ccp1cvF2SbdCBrZFGQxvkHEftcOqFahBWhiD0BSSOg3Mz286\n8nviWYapzqMf2cIpXqUTlxgZZA28oswHsQoLLy0CgYEA2sm1I4IBGEROInKXWouz\nCO12ZNqdppj6lPZ8LULSlDQFAEyuJxEbqKFh5N+5Y78OLkB0g5HhaKwJPyPiqhe7\nELeyWaHoPfAMF8Jjq7/VTTxT5Y75P17L+sAIxgkElMXrNw+qD8yqflr+uRfVpdTh\n7n9GVnWXFWkr5F+61a5fnHw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "manager@classcalender.iam.gserviceaccount.com",
+  "client_id": "100419916011322479787",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/manager%40classcalender.iam.gserviceaccount.com"
+}
